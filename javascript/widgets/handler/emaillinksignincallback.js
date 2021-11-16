@@ -50,6 +50,9 @@ goog.require('goog.Promise');
 goog.requireType('firebaseui.auth.ui.page.Base');
 
 
+
+goog.require('firebaseui.auth.widget.handler.completeSecondFactorResolution_');
+
 /**
  * Handles email link sign-in completion. Decides whether to allow sign-in
  * completion, ask the user for email, ask for consent when completing sign-in
@@ -322,6 +325,16 @@ firebaseui.auth.widget.handler.completeEmailLinkSignIn_ = function(
               container,
               link,
               firebaseui.auth.widget.handler.completeEmailConfirmation_,
+              null,
+              errorMessage);
+        } else if (normalizedError['code'] == 'auth/multi-factor-auth-required') {
+          console.log(normalizedError['code']);
+          firebaseui.auth.widget.handler.handle(
+              firebaseui.auth.widget.HandlerName.SECOND_FACTOR_RESOLUTION,
+              app,
+              container,
+              link,
+              firebaseui.auth.widget.handler.completeSecondFactorResolution_,
               null,
               errorMessage);
         } else {

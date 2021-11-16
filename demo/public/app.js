@@ -92,9 +92,10 @@ function getUiConfig() {
     }
   };
 }
-
+var auth = firebase.auth();
+auth.useEmulator('http://localhost:9099');
 // Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
+var ui = new firebaseui.auth.AuthUI(auth);
 // Disable auto-sign in.
 ui.disableAutoSignIn();
 

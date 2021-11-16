@@ -94,6 +94,8 @@ goog.requireType('firebaseui.auth.PendingEmailCredential');
 goog.requireType('firebaseui.auth.ui.page.Base');
 
 
+/** @suppress {extraRequire} */
+goog.require('firebaseui.auth.widget.handler.handleEmailLinkSignInCallback');
 
 
 /**

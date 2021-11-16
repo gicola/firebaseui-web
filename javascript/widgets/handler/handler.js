@@ -60,6 +60,8 @@ firebaseui.auth.widget.HandlerName = {
   UNSUPPORTED_PROVIDER: 'unsupportedProvider',
   VERIFY_AND_CHANGE_EMAIL: 'verifyAndChangeEmail',
   REVERT_SECOND_FACTOR_ADDITION: 'revertSecondFactorAddition',
+  SECOND_FACTOR_RESOLUTION: 'secondFactorResolution',
+  SECOND_FACTOR_RESOLUTION_CALLBACK: 'handleSecondFactorResolutionCallback',
 };
 
 
