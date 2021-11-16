@@ -1,4 +1,6 @@
 goog.provide('firebaseui.auth.widget.handler.completeSecondFactorResolution_');
+goog.provide('firebaseui.auth.ui.page.SecondFactorResolution');
+
 
 firebaseui.auth.widget.handler.completeSecondFactorResolution_ = function(
     app, container, email, link) {
